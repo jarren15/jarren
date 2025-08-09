@@ -1,26 +1,43 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
+$dark-mode-background: #121619;
+$dark-mode-foreground: #f2f4f8;
+$dark-mode-secondary: #a2a9b0;
+$dark-mode-accent: #33b1ff;
+$dark-mode-border: #8d8d8d;
+$light-mode-background: #f2f4f8;
+$light-mode-foreground: #121619;
+$light-mode-secondary: #4d5358;
+$light-mode-accent: #00539a;
+$light-mode-border: #6f6f6f;
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-accent: var(--custom-accent-color);
+  --border-color: var(--custom-border-color);
+  --color-secondary: var(--custom-secondary-color);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+:root {
+  --custom-accent-color: #{$light-mode-accent};
+  --custom-border-color: #{$light-mode-border};
+  --custom-secondary-color: #{$light-mode-secondary};
+  @media (prefers-color-scheme: dark) {
+    --custom-accent-color: #{$dark-mode-accent};
+    --custom-border-color: #{$dark-mode-border};
+    --custom-secondary-color: #{$dark-mode-secondary};
   }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--custom-font-roboto-flex), Helvetica, sans-serif;
+  background: $light-mode-background;
+  color: $light-mode-foreground;
+  @media (prefers-color-scheme: dark) {
+    background: $dark-mode-background;
+    color: $dark-mode-foreground;
+  }
+}
+
+.custom-heading-2 {
+  @apply font-medium mb-10 text-4xl uppercase;
 }

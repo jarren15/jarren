@@ -1,16 +1,12 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Roboto_Flex } from "next/font/google";
 // import "./globals.css";
 import "@/styles/globals.scss";
 import Sidebar from "@/components/layout/Sidebar";
+import SideNavContextProvider from "@/providers/SideNavContext";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const robotoFlexFont = Roboto_Flex({
+  variable: "--custom-font-roboto-flex",
   subsets: ["latin"],
 });
 
@@ -26,9 +22,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
-        <Sidebar />
-        {children}
+      <body className={`${robotoFlexFont.variable} antialiased text-base`}>
+        <SideNavContextProvider>
+          <Sidebar />
+          {children}
+        </SideNavContextProvider>
       </body>
     </html>
   );

@@ -1,0 +1,18 @@
+{
+    "jobs": [
+        {
+            "id": 1,
+            "role": "full-stack developer",
+            "company": "siamese design studio",
+            "date": "June 2019 — August 2020",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti laudantium ratione vero quisquam deleniti provident assumenda modi nam error itaque."
+        },
+        {
+            "id": 2,
+            "role": "full-stack developer",
+            "company": "IBM",
+            "date": "August 2020 — Present",
+            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti laudantium ratione vero quisquam deleniti provident assumenda modi nam error itaque."
+        }
+    ]
+}
