@@ -1,18 +1,25 @@
 {
-    "jobs": [
-        {
-            "id": 1,
-            "role": "full-stack developer",
-            "company": "siamese design studio",
-            "date": "June 2019 — August 2020",
-            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti laudantium ratione vero quisquam deleniti provident assumenda modi nam error itaque."
-        },
-        {
-            "id": 2,
-            "role": "full-stack developer",
-            "company": "IBM",
-            "date": "August 2020 — Present",
-            "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti laudantium ratione vero quisquam deleniti provident assumenda modi nam error itaque."
-        }
-    ]
+  "jobs": [
+    {
+      "id": 1,
+      "role": "full-stack developer",
+      "company": "siamese design studio",
+      "date": "June 2019 — August 2020",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti laudantium ratione vero quisquam deleniti provident assumenda modi nam error itaque."
+    },
+    {
+      "id": 2,
+      "role": "full-stack developer",
+      "company": "IBM",
+      "date": "August 2020 — Present",
+      "description": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corrupti laudantium ratione vero quisquam deleniti provident assumenda modi nam error itaque."
+    }
+  ],
+
+  "links": [
+    { "id": "link-1", "text": "Link 1", "href": "#" },
+    { "id": "link-2", "text": "Link 2", "href": "#" },
+    { "id": "link-3", "text": "Link 3", "href": "#" },
+    { "id": "link-4", "text": "Link 4", "href": "#" }
+  ]
 }

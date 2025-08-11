@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Roboto_Flex } from "next/font/google";
 // import "./globals.css";
 import "@/styles/globals.scss";
+import Footer from "@/components/layout/Footer";
 import Sidebar from "@/components/layout/Sidebar";
 import SideNavContextProvider from "@/providers/SideNavContext";
 
@@ -22,10 +23,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${robotoFlexFont.variable} antialiased text-base`}>
+      <body className={`${robotoFlexFont.variable} antialiased font-light text-base`}>
         <SideNavContextProvider>
           <Sidebar />
           {children}
+          <Footer />
         </SideNavContextProvider>
       </body>
     </html>

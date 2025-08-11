@@ -12,32 +12,48 @@ $light-mode-accent: #00539a;
 $light-mode-border: #6f6f6f;
 
 @theme inline {
-  --color-accent: var(--custom-accent-color);
   --border-color: var(--custom-border-color);
+  --color-accent: var(--custom-accent-color);
+  --color-accent-reverse: var(--custom-accent-color-reverse);
+  --color-background: var(--custom-background-color);
+  --color-foreground: var(--custom-foreground-color);
   --color-secondary: var(--custom-secondary-color);
+  --shadow-border: var(--custom-box-shadow-border);
 }
 
 :root {
   --custom-accent-color: #{$light-mode-accent};
+  --custom-accent-color-reverse: #{$dark-mode-accent};
+  --custom-background-color: #{$light-mode-background};
   --custom-border-color: #{$light-mode-border};
+  --custom-box-shadow-border: inset 0 0 0 1px #{$light-mode-border};
+  --custom-foreground-color: #{$light-mode-foreground};
   --custom-secondary-color: #{$light-mode-secondary};
   @media (prefers-color-scheme: dark) {
     --custom-accent-color: #{$dark-mode-accent};
+    --custom-accent-color-reverse: #{$light-mode-accent};
+    --custom-background-color: #{$dark-mode-background};
     --custom-border-color: #{$dark-mode-border};
+    --custom-box-shadow-border: inset 0 0 0 1px #{$dark-mode-border};
+    --custom-foreground-color: #{$dark-mode-foreground};
     --custom-secondary-color: #{$dark-mode-secondary};
   }
 }
 
 body {
   font-family: var(--custom-font-roboto-flex), Helvetica, sans-serif;
-  background: $light-mode-background;
-  color: $light-mode-foreground;
-  @media (prefers-color-scheme: dark) {
-    background: $dark-mode-background;
-    color: $dark-mode-foreground;
-  }
+  background: var(--custom-background-color);
+  color: var(--custom-foreground-color);
 }
 
 .custom-heading-2 {
   @apply font-medium mb-10 text-4xl uppercase;
+}
+
+.custom-text-link {
+  @apply hover:underline dark:hover:text-[#fff] hover:text-[#000];
+}
+
+.custom-text-link-highlight {
+  @apply font-medium hover:underline dark:hover:text-[#fff] hover:text-[#000];
 }
